@@ -1,0 +1,38 @@
+/*
+BLACK: rgb: 0,0,0             #000000
+BLUE: rgb: 21, 16, 180        #1510B4
+PALE BLUE: rgb: 86, 79, 255   #564FFF
+FUCHSIA: rgb: 171, 16, 180    #AB10B4
+PINK: rgb: 247, 107, 255      #F76BFF
+YELLOW: rgb: 255, 255, 47     #FFFF2F
+*/
+
+button {
+  background-color:#564FFF ;
+  font-size: 12px ;
+  color: white;
+}
+
+button:hover {
+  background-color: #1510B4;
+  color: white;
+}
+
+#signup {
+  background-color: #FFFF2F;
+  font-size: 12px;
+  color: #1510B4;
+}
+
+#signup:hover {
+  background-color: white;
+  color: #564FFF;
+}
+
+.graduationYear:nth-child(even) {
+  background-color: #b3d4fc;
+}
+
+*::selection {
+  background-color: rgba(255, 255, 20, 0.68);
+}
