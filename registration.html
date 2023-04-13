@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alumni Registration | ASM</title>
+</head>
+<body>
+<h1>Inscription Alumni de Saint-Michel Amparibe</h1>
+<form action="/registrationSuccessful">
+  <label for="fName">Prénom(s)</label>
+    <input type="text" name="fName" id="fName" minlength="3" maxlength="50" placeholder="Aina" required><br>
+  <label for="lName">Nom de famille</label>
+    <input type="text" name="lName" id="lName" minlength="2" maxlength="50" placeholder="Rakoto" required><br>
+
+<!--  The name attribute creates a unique behavior for radio buttons.-->
+<!--  label "for" always need a matching "id" in the input-->
+<!--  To make the radio buttons connected, we need the "name" to be the same for all the selection-->
+  <label>Sélectionne ton genre:</label><br>
+  <label for="male">
+    <input type="radio" name="gender" id="male" value="Homme">Male</label>
+  <label for="female">
+    <input type="radio" name="gender" id="female" value="Femme">Female</label>
+  <label for="genderX">
+    <input type="radio" name="gender" id="genderX" value="X">X</label><br>
+
+<!--  ID the user with email and password to register as alumni-->
+  <label for="email">Saisir ton courriel</label>
+  <input type="email" name="email" id="email" placeholder="exemple@email.com"><br>
+
+  <label for="password">Mot de passe</label>
+  <input type="password" name="pwd" id="password" minlength="4"><br>
+
+  <label for="promotion">Sélectionne ta promotion
+    <select name="promotionName" id="promotion">
+      <option value=""></option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+    </select>
+  </label><br>
+
+  <button type="submit">Soumettre</button>
+</form>
+
+</body>
+</html>
