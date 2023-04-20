@@ -86,3 +86,19 @@ button:hover {
   border-radius: 8px;
   padding: 30px;
 }
+
+#logoASM {
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.nav h1 {
+  align-content: center;
+}
+
+img {
+  width: 20rem;
+  margin: 0.25rem;
+}
