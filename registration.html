@@ -8,7 +8,7 @@
 <body>
 <h1>Inscription Alumni de Saint-Michel Amparibe</h1>
 <form action="/registrationSuccessful">
-  <div>
+  <div class="container">
     <label for="fName">Prénom(s)</label>
       <input class="formInputs" type="text" name="fName" id="fName" minlength="3" maxlength="50" placeholder="Aina" required><br>
     <label for="lName">Nom de famille</label>
@@ -17,29 +17,39 @@
   <!--  The name attribute creates a unique behavior for radio buttons.-->
   <!--  label "for" always need a matching "id" in the input-->
   <!--  To make the radio buttons connected, we need the "name" to be the same for all the selection-->
-    <label>Sélectionne ton genre:</label><br>
-    <label for="male">
-      <input type="radio" name="gender" id="male" value="Homme">Male</label>
-    <label for="female">
-      <input type="radio" name="gender" id="female" value="Femme">Female</label>
-    <label for="genderX">
-      <input type="radio" name="gender" id="genderX" value="X">X</label><br>
+    <label class="radio">Sélectionne ton genre:</label>
+    <div class="radio">
+      <label for="male">
+        <input type="radio" name="gender" id="male" value="Homme">Male</label>
+      <label for="female">
+        <input type="radio" name="gender" id="female" value="Femme">Female</label>
+      <label for="genderX">
+        <input type="radio" name="gender" id="genderX" value="X">X</label>
+    </div>
 
   <!--  ID the user with email and password to register as alumni-->
     <label for="email">Saisir ton courriel</label>
-    <input class="formInputs" type="email" name="email" id="email" placeholder="exemple@email.com"><br>
-
+    <input class="formInputs" type="email" name="email" id="email" placeholder="exemple@email.com">
     <label for="password">Mot de passe</label>
-    <input class="formInputs" type="password" name="pwd" id="password" minlength="4"><br>
+    <input class="formInputs" type="password" name="pwd" id="password" minlength="4" placeholder="Minimum 4 caractères">
 
-    <label for="promotion">Sélectionne ta promotion
-      <select name="promotionName" id="promotion">
+    <label for="promotion">Sélectionne ta promotion</label>
+      <select class="dropdown" name="promotionName" id="promotion">
         <option value=""></option>
         <option value="2022">2022</option>
         <option value="2021">2021</option>
         <option value="2020">2020</option>
       </select>
-    </label><br>
+    <br>
+<!--    <div class="dropdown">-->
+<!--      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--        Dropdown-->
+<!--      </button>-->
+<!--      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">-->
+<!--        <button class="dropdown-item" type="button">Action</button>-->
+<!--        <button class="dropdown-item" type="button">Another action</button>-->
+<!--        <button class="dropdown-item" type="button">Something else here</button>-->
+<!--      </div>-->
   </div>
 
   <button id="signup">S'inscrire en temps qu'ASM</button>
