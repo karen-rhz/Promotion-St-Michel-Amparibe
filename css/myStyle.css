@@ -7,6 +7,20 @@ PINK: rgb: 247, 107, 255      #F76BFF
 YELLOW: rgb: 255, 255, 47     #FFFF2F
 */
 
+/* Color Theme Swatches in Hex */
+.colorful-abstract-background-1-hex { color: #0339A6; }
+.colorful-abstract-background-2-hex { color: #04ADBF; }
+.colorful-abstract-background-3-hex { color: #F2B705; }
+.colorful-abstract-background-4-hex { color: #F28705; }
+.colorful-abstract-background-5-hex { color: #F2380F; }
+
+/* Color Theme Swatches in RGBA */
+.colorful-abstract-background-1-rgba { color: rgba(3, 57, 165, 1); }
+.colorful-abstract-background-2-rgba { color: rgba(3, 172, 191, 1); }
+.colorful-abstract-background-3-rgba { color: rgba(242, 182, 4, 1); }
+.colorful-abstract-background-4-rgba { color: rgba(242, 135, 4, 1); }
+.colorful-abstract-background-5-rgba { color: rgba(242, 56, 14, 1); }
+
 /*Select everything*/
 * {
   font-family: 'Roboto', sans-serif;
