@@ -51,19 +51,20 @@ button {
 }
 
 button:hover {
+  transition: 800ms;
   background-color: #1510B4;
   border: 0.025em solid #FFFFFF;
   color: white;
   cursor: pointer;
 }
 
-#signup button {
+button#signup  {
   background-color: #FFFF2F;
   font-size: 16px;
   color: #1510B4;
 }
 
-#signup:hover button {
+button#signup:hover {
   background-color: white;
   border: 0.025em solid #1510B4;
   color: #1510B4;
@@ -93,12 +94,12 @@ button:active{
 .searchBar {
   border: 0.025rem solid #e1e1e1;
   border-radius: 8px;
-  width: 72%;
   height: 50px;
   line-height: normal;
   padding-left: 24px;
-  margin: 4px 16px 4px 0;
+  margin: auto;
   box-sizing: border-box;
+  min-width: 60%;
 }
 
 *::selection {
@@ -108,6 +109,7 @@ label {
   margin-bottom: 12px;
 }
 .container {
+  margin: 20px auto 40px;
   max-height: 80%;
   min-height: 20%;
   max-width: 50%;
@@ -115,8 +117,7 @@ label {
   border: 0.025em solid #e1e1e1;
   border-radius: 16px;
   padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 0.2em rgba(10,10,10,.02);
   /*box-shadow: 0 4px 0 #e1e1e1; // SOLID LIGHT GREY SHADOW*/
 }
 
@@ -133,7 +134,7 @@ label {
 
 img {
   width: 20rem;
-  /*margin: 0.25rem;*/
+  margin: 0.25rem;
   border-radius: 16px;
 }
 thead {
@@ -144,14 +145,16 @@ thead {
   margin: 0.25em;
 }
 table {
-  display: table;
+  margin: 20px auto 40px;
   table-layout: fixed;
   width: 50%;
   border-collapse: separate;
   border-radius: 16px;
   text-align: center;
   border: 0.025em solid #e1e1e1;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 0.2em rgba(10,10,10,.02);
 }
+
 tbody tr:nth-child(odd) {
   background-color: rgba(170, 170, 255, 0.2);
   height: 24px;
@@ -185,4 +188,16 @@ tr:last-of-type td:last-of-type {
 }
 .dropdown label {
   margin-right: 24px;
+}
+
+#newAlumni {
+  display: inline-block;
+  margin: 20px auto 40px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 2px solid #222222;
 }
