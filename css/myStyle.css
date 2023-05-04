@@ -8,18 +8,29 @@ YELLOW: rgb: 255, 255, 47     #FFFF2F
 */
 
 /* Color Theme Swatches in Hex */
-.colorful-abstract-background-1-hex { color: #0339A6; }
-.colorful-abstract-background-2-hex { color: #04ADBF; }
-.colorful-abstract-background-3-hex { color: #F2B705; }
-.colorful-abstract-background-4-hex { color: #F28705; }
-.colorful-abstract-background-5-hex { color: #F2380F; }
+.colorful-abstract-background-blue-hex { color: #0339A6; }
+.colorful-abstract-background-teal-hex { color: #04ADBF; }
+.colorful-abstract-background-yellow-hex { color: #F2B705; }
+.colorful-abstract-background-orange-hex { color: #F28705; }
+.colorful-abstract-background-red-hex { color: #F2380F; }
 
 /* Color Theme Swatches in RGBA */
-.colorful-abstract-background-1-rgba { color: rgba(3, 57, 165, 1); }
-.colorful-abstract-background-2-rgba { color: rgba(3, 172, 191, 1); }
-.colorful-abstract-background-3-rgba { color: rgba(242, 182, 4, 1); }
-.colorful-abstract-background-4-rgba { color: rgba(242, 135, 4, 1); }
-.colorful-abstract-background-5-rgba { color: rgba(242, 56, 14, 1); }
+.colorful-abstract-background-blue-rgba { color: rgba(3, 57, 165, 1); }
+.colorful-abstract-background-teal-rgba { color: rgba(3, 172, 191, 1); }
+.colorful-abstract-background-yellow-rgba { color: rgba(242, 182, 4, 1); }
+.colorful-abstract-background-orange-rgba { color: rgba(242, 135, 4, 1); }
+.colorful-abstract-background-red-rgba { color: rgba(242, 56, 14, 1); }
+
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    #0339A6,
+    #04ADBF,
+    #F2B705,
+    #F28705,
+    #F2380F
+  );
+}
 
 /*Select everything*/
 * {
@@ -27,7 +38,16 @@ YELLOW: rgb: 255, 255, 47     #FFFF2F
 }
 body {
   margin: 0;
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 20s infinite alternate-reverse;
 }
+
+@keyframes bg-animation {
+  0% {background-position: left}
+  100% {background-position: right}
+}
+
 body::-webkit-scrollbar {
   width: 1rem;
 }
@@ -73,6 +93,7 @@ button:hover {
 }
 
 button#signup  {
+  margin: 20px 10px;
   background-color: #FFFF2F;
   font-size: 16px;
   color: #1510B4;
@@ -83,7 +104,19 @@ button#signup:hover {
   border: 0.025em solid #1510B4;
   color: #1510B4;
 }
-
+button#clear  {
+  margin: 20px 10px;
+  color: slategrey;
+  background-color: lightgrey;
+  font-size: 16px;
+  border: 0.025em solid slategrey;
+  box-shadow: 0 4px 0 slategrey;
+}
+button#clear:active  {
+  transition: 0.025s;
+  transform: translateY(4px);
+  box-shadow: 0 0 0 black;
+}
 button:active{
   transition: 0.025s;
   transform: translateY(4px);
@@ -209,9 +242,9 @@ tr:last-of-type td:last-of-type {
   margin: 20px auto 40px;
 }
 
-.btn {
+.btn--group {
   display: inline-block;
   text-decoration: none;
-  padding: 1em 2em;
-  border: 2px solid #222222;
+  padding: 0 10px;
+  border: 2px solid red;
 }
