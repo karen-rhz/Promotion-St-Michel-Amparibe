@@ -39,15 +39,21 @@ YELLOW: rgb: 255, 255, 47     #FFFF2F
 body {
   margin: 0;
   background-image: var(--gradient);
-  background-size: 400%;
+  background-size: 400% 400%;
   animation: bg-animation 20s infinite alternate-reverse;
 }
 
 @keyframes bg-animation {
-  0% {background-position: left}
-  100% {background-position: right}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
 body::-webkit-scrollbar {
   width: 1rem;
 }
@@ -156,6 +162,7 @@ label {
   margin-bottom: 12px;
 }
 .container {
+  background: #cccccc;
   margin: 20px auto 40px;
   max-height: 80%;
   min-height: 20%;
